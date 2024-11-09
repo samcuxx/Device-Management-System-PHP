@@ -1,0 +1,168 @@
+Create a professional device management system for Comprint Services using PHP, MySQL, and Bootstrap 5. The system should be secure, responsive, and follow modern web development practices.
+
+Core Technologies:
+
+- Backend: PHP 7.4+
+- Database: MySQL
+- Frontend: Bootstrap 5
+- Additional: jQuery, DataTables, Chart.js
+
+Required Pages and Features:
+
+1. Login Page:
+
+- Clean, centered login form with company logo
+- Email/username and password fields
+- Remember me functionality
+- Form validation with error messages
+- Secure authentication system
+- Forgot password link
+
+2. Dashboard:
+
+- Summary cards showing total devices, pending repairs, completed repairs
+- Recent devices table (last 5 entries)
+- Chart showing device status distribution
+- Chart showing device types distribution
+- Quick actions buttons for common tasks
+- Responsive grid layout
+- Color-coded status indicators
+
+3. Employees Management:
+
+- Table listing all employees with pagination
+- Search functionality for employees
+- Add new employee form with fields:
+  - Full name
+  - Email
+  - Password
+  - Role (Admin/Employee)
+  - Contact number
+- Edit and delete employee functionality
+- Modal confirmations for critical actions
+
+4. Add Device Page:
+
+- Form with the following fields:
+  - Device name (required)
+  - Device type dropdown (Computer, Printer, Network, Other)
+  - Problem description (textarea)
+  - Conditional fields for computers:
+    - RAM size
+    - Drive size
+  - Client name
+  - Client contact
+  - Date received
+  - Status dropdown (Pending, In Progress, Completed)
+- Dynamic form validation
+- Success/error notifications
+- File attachment option for device images
+
+5. Devices List Page:
+
+- Advanced DataTable with:
+  - Search functionality
+  - Multiple filters (status, type, date range)
+  - Sortable columns
+  - Pagination
+  - Export to Excel/PDF
+- Columns:
+  - Device ID
+  - Device name
+  - Type
+  - Client
+  - Status (with color indicators)
+  - Date received
+  - Actions (Edit/Delete)
+- Bulk actions (status update, delete)
+- Responsive table design
+
+6. Update Device Page:
+
+- Pre-populated form with device details
+- All fields from Add Device page
+- Status update functionality
+- Repair progress notes
+- Timestamp for updates
+- Edit history log
+
+Database Structure:
+
+Users table:
+
+- id (PRIMARY KEY)
+- username
+- password (hashed)
+- full_name
+- email
+- role
+- created_at
+
+Devices table:
+
+- id (PRIMARY KEY)
+- device_name
+- device_type
+- problem_description
+- ram_size (nullable)
+- drive_size (nullable)
+- client_name
+- client_contact
+- status
+- created_at
+- updated_at
+- assigned_to (FOREIGN KEY to users)
+
+UI Requirements:
+
+- Professional color scheme (suggest using blue (#007bff) as primary color)
+- Consistent padding and spacing
+- Responsive design for all screen sizes
+- Loading spinners for async operations
+- Toast notifications for actions
+- Modal confirmations for deletions
+- Clean typography using Bootstrap defaults
+- Proper form validation styling
+- Hover effects on interactive elements
+- Smooth transitions and animations
+- Properly aligned forms and elements
+
+Additional Features:
+
+- Session management
+- Input sanitization
+- CSRF protection
+- Error logging
+- User activity logging
+- Data backup functionality
+- Print reports feature
+- Dashboard analytics
+- User permissions system
+
+Navigation:
+
+- Sidebar navigation with:
+  - Dashboard
+  - Devices
+  - Employees
+  - Reports
+  - Settings
+- Collapsible on mobile
+- Active state indicators
+- User profile dropdown in header
+
+Error Handling:
+
+- Proper error messages
+- Form validation feedback
+- Database error handling
+- 404 page
+- Session timeout handling
+
+Security Features:
+
+- Password hashing
+- SQL injection prevention
+- XSS protection
+- Input validation
+- Role-based access control
